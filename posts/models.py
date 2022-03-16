@@ -33,9 +33,10 @@ class Post(models.Model):
     )
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
-        
+    )
+
     class Meta:
         ordering = ['-created_at']
-
+    
     def __str__(self):
         return f'{self.id} {self.title}'
